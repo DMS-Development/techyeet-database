@@ -1,0 +1,39 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  available_to_start: MyString
+  search_start_date: 2023-11-07
+  search_status: MyString
+  urgency: 1
+  current_title: MyString
+  desired_role: MyString
+  work_experience: MyText
+  education_level: MyString
+  company_size_preference: MyString
+  willing_to_relocate: false
+  salary_range: MyString
+  unique_selling_point: MyText
+  success_stories: MyText
+  certifications: MyText
+  websites: MyText
+  resume_link: MyString
+
+two:
+  name: MyString
+  available_to_start: MyString
+  search_start_date: 2023-11-07
+  search_status: MyString
+  urgency: 1
+  current_title: MyString
+  desired_role: MyString
+  work_experience: MyText
+  education_level: MyString
+  company_size_preference: MyString
+  willing_to_relocate: false
+  salary_range: MyString
+  unique_selling_point: MyText
+  success_stories: MyText
+  certifications: MyText
+  websites: MyText
+  resume_link: MyString
