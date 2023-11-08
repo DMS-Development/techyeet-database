@@ -1,29 +1,47 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+<% content_for :head do %>
+  <%= stylesheet_link_tag 'register', media: 'all', 'data-turbolinks-track': 'reload' %>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<div class="logo-header">
+  <%= image_tag("techyeet-logo.webp", class: "logo-header-image", alt: "techyeet logo") %>
+</div>
+
+<div class="content">
+  <div class="green-style-column"></div>
+
+  <div class="register-form-container">
+    <div class="register-form">
+
+      <h2 class="title">Sign up</h2>
+      <div class="register-user-form">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+
+          <div class="field">
+            <%= f.label :email %><br/>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "email" %>
+          </div>
+          <br>
+
+          <div class="field" , id="password-field">
+            <%= f.label :password %>
+            <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "password", required: true, minlength: "8", pattern: "(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}", title: "Must contain at least one number, one uppercase letter, one lowercase letter, one special character, and be at least 8 characters long." %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password_confirmation %><br/>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password", class: "password" %>
+          </div>
+          <br>
+
+          <div class="actions">
+            <%= f.submit "Sign up", class: "submit" %>
+          </div>
+        <% end %>
+
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+  <div class="green-style-column"></div>
+</div>
