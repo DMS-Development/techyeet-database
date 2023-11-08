@@ -3,4 +3,6 @@ class JobSeeker < ApplicationRecord
   has_one :location, dependent: :destroy
   has_and_belongs_to_many :skills
   has_and_belongs_to_many :industries
+
+  accepts_nested_attributes_for :location
 end

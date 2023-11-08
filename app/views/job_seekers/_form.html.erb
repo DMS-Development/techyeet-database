@@ -1,0 +1,17 @@
+<%= form_with(model: job_seeker) do |form| %>
+  <% if job_seeker.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(job_seeker.errors.count, "error") %> prohibited this job_seeker from being saved:</h2>
+
+      <ul>
+        <% job_seeker.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
