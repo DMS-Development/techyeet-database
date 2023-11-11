@@ -1,0 +1,147 @@
+.logo-header {
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #093042;
+}
+
+.logo-header-image {
+    width: 20rem;
+}
+
+.content {
+    display: flex;
+    height: 85vh;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    overflow-y: scroll;
+}
+
+.new-job-seeker-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 95%;
+    background-color: #fdfdfd;
+    overflow: scroll;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 10px;
+}
+
+.jobseeker-title {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #093042;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.new-job-seeker-main>form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.new-job-seeker-main>form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #093042;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.new-job-seeker-main>form input[type="text"],
+.new-job-seeker-main>form input[type="date"],
+.new-job-seeker-main>form select,
+.new-job-seeker-main>form textarea {
+    width: 100%;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+::placeholder {
+    color: #a9a9a9;
+    font-family: 'Poppins', sans-serif;
+    font-size: .7rem;
+}
+
+.new-job-seeker-main>form input[type="submit"] {
+    cursor: pointer;
+    background-color: #0C5A97;
+    color: white;
+    padding: .8rem;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+}
+
+.submit-container {
+    grid-column: 1 / span 2; /* Span across both columns */
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    padding: 1rem; /* Adjust padding as needed */
+}
+
+.new-job-seeker-main>form input[type="submit"]:hover {
+    background-color: #093042;
+}
+
+.new-job-seeker-main>form input[type="text"]:focus,
+.new-job-seeker-main>form input[type="date"]:focus,
+.new-job-seeker-main>form select:focus,
+.new-job-seeker-main>form textarea:focus {
+    border-color: #0C5A97;
+    outline: none;
+}
+
+.relocate-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+}
+
+.new-job-seeker-main > div {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+/* Hyperlink styling */
+a.back-link {
+    color: #0C5A97;
+    text-decoration: none;
+    padding-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.relocate-label {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.green-style-column {
+    width: 3vw;
+    height: 100%;
+    background-color: #93F0AA;
+}

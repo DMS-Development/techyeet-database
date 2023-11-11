@@ -11,7 +11,59 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.submit %>
+  <%= form.label :name %>
+  <%= form.text_field :name, placeholder: "Name", required: true %>
+
+  <%= form.label :current_title %>
+  <%= form.text_field :current_title, placeholder: "Current job title", required: true %>
+
+  <%= form.label :desired_role %>
+  <%= form.text_field :desired_role, placeholder: "Desired role?", required: true %>
+
+  <%= form.label :available_to_start %>
+  <%= form.select :available_to_start, options_for_select(["Immediate", "Two Weeks", "One Month", "More than a month"]), required: true %>
+
+  <%= form.label :search_start_date %>
+  <%= form.date_field :search_start_date, value: Date.today, required: true %>
+
+
+  <%= form.label :search_status %>
+  <%= form.select :search_status, options_for_select(%w[Active Inactive]), prompt: "Actively searching?", required: true %>
+
+  <%= form.label :urgency %>
+  <%= form.select :urgency, options_for_select([1, 2, 3, 4, 5]), prompt: "1 is most urgent", required: true %>
+
+  <%= form.label :education_level %>
+  <%= form.select :education_level, options_for_select(["High School", "GED", "College", "Some College", "Graduate School"]), prompt: "Highest education level", required: true %>
+
+  <%= form.label :company_size_preference %>
+  <%= form.select :company_size_preference, options_for_select(["Small", "Medium", "Large"]),prompt: "preferred company size", required: true %>
+
+  <%= form.label :salary_range %>
+  <%= form.select :salary_range, options_for_select(["$70,000-$85,000", "$85,000-$100,000", "$100,000-$115,000", "$115,000-$130,000", "$130,000-$145,000", "$145,000-$160,000", "$175,000-$190,
+    000+"]), prompt: "Desired salary range", required: true %>
+
+  <%= form.label :work_experience %>
+  <%= form.text_area :work_experience, placeholder: "Give a general overview of your recent work experience", required: true %>
+
+  <%= form.label :unique_selling_point %>
+  <%= form.text_area :unique_selling_point, placeholder: "What makes you unique? What are your strengths?", required: true %>
+
+  <%= form.label :success_stories %>
+  <%= form.text_area :success_stories, placeholder: "What are some of your biggest accomplishments?", required: true %>
+
+  <%= form.label :certifications %>
+  <%= form.text_area :certifications, placeholder: "List any certifications you have", required: true %>
+
+  <%= form.label :websites %>
+  <%= form.text_area :websites, placeholder: "List any relevant links to you", required: true %>
+
+  <%= form.label :willing_to_relocate, class: "relocate-label" %>
+  <%= form.check_box :willing_to_relocate %>
+
+  <%#= resume %>
+
+  <div class="submit-container">
+    <%= form.submit%>
   </div>
 <% end %>

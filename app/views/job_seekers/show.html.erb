@@ -1,10 +1,23 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @job_seeker %>
+<div class="logo-header">
+  <%= image_tag("techyeet-logo.webp", class: "logo-header-image", alt: "techyeet logo") %>
+</div>
 
-<div>
-  <%= link_to "Edit this job seeker", edit_job_seeker_path(@job_seeker) %> |
-  <%= link_to "Back to job seekers", job_seekers_path %>
+<div class="jb-content">
 
-  <%= button_to "Destroy this job seeker", @job_seeker, method: :delete %>
+  <div class="green-style-column"></div>
+  <div class="jobseeker-detail-view">
+    <%= render @job_seeker %>
+
+    <div>
+      <%= link_to "Edit this job seeker", edit_job_seeker_path(@job_seeker) %> |
+      <%= link_to "Back to job seekers", job_seekers_path %>
+
+      <%= button_to "Destroy this job seeker", @job_seeker, method: :delete %>
+    </div>
+  </div>
+
+  <div class="green-style-column"></div>
+
 </div>

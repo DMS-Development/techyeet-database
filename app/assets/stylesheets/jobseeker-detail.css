@@ -1,0 +1,118 @@
+.logo-header {
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #093042;
+}
+
+.logo-header-image {
+    width: 20rem;
+}
+
+.jb-content {
+    display: flex;
+    align-items: center;
+    height: 85vh;
+    justify-content: space-between;
+    gap: .5rem;
+    overflow-y: scroll;
+}
+
+#job-seeker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jobseeker-detail-view {
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    margin: 10px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+h6 {
+    margin: 5px 0;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-size: 14px;
+    line-height: 21px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-container {
+    background-color: #84cced;
+    border-radius: 20px 2.5px 20px 2.5px;
+    box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+    color: white;
+    padding-top: 30px;
+    width: 350px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.card-container .pro {
+    color: #231E39;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 3px 7px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.card-container .round {
+    border: 3px solid #93F0AA;
+    border-radius: 50%;
+    padding: 7px;
+}
+
+button.primary {
+    background-color: #93F0AA;
+    border: 1px solid #93F0AA;
+    border-radius: 3px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding: 10px 25px;
+}
+
+button.primary.ghost {
+    background-color: transparent;
+    color: #93F0AA;
+    font-family: 'Poppins', sans-serif;
+}
+
+.skills {
+    background-color: #84cced;
+    text-align: left;
+    padding: 15px;
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 2.5px;
+}
+
+.skills ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skills ul li {
+    border: 1px solid #93F0AA;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 7px 7px 0;
+    padding: 7px;
+}

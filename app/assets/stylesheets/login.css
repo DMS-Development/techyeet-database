@@ -75,7 +75,6 @@ label {
     align-items: center;
     justify-content: center;
     width: 60%;
-
 }
 
 .email::placeholder, .password::placeholder {

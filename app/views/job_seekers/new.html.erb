@@ -1,9 +1,24 @@
-<h1>New job seeker</h1>
+<% content_for :head do %>
+  <%= stylesheet_link_tag 'new-jobseeker', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %>
 
-<%= render "form", job_seeker: @job_seeker %>
+<div class="logo-header">
+  <%= image_tag("techyeet-logo.webp", class: "logo-header-image", alt: "techyeet logo") %>
+</div>
 
-<br>
+<div class="content">
+  <div class="green-style-column"></div>
 
-<div>
-  <%= link_to "Back to job seekers", job_seekers_path %>
+  <div class="new-job-seeker-main">
+    <h1 class="jobseeker-title">New Job seeker</h1>
+
+    <%= render "form", job_seeker: @job_seeker %>
+
+    <br>
+
+    <div>
+      <%= link_to "Back to job seekers", @job_seeker, class: "back-link" %>
+    </div>
+  </div>
+  <div class="green-style-column"></div>
 </div>
