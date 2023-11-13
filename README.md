@@ -1,7 +1,7 @@
 # Tech Community Job Seeker Platform
 
 ## Description
-An interactive platform for the diverse Tech Community in Denver, serving as a bridge between job seekers and potential employers. It allows job seekers to create detailed profiles and enables employers to search, filter, and contact candidates directly.
+An interactive platform for the diverse Tech Community in Denver, serving as a bridge between job seekers and potential employers. It allows job seekers to create detailed profiles and enables employers to search, filter, and contact candidates directly.<br>
 ***Live demo coming soon!***
 
 ## Key Features
