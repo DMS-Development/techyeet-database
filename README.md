@@ -13,7 +13,7 @@ An interactive platform for the diverse Tech Community in Denver, serving as a b
 ## Technologies Used
 - **Full-stack Development:** Ruby on Rails
 - **Frontend:** ERB/RHTML, CSS, and Stimulus for JavaScript interactivity
-- **Authentication:** Devise with role-based access control
+- **Authentication:** Devise
 - **Social Media Integration:** OmniAuth
 - **Database:** PostgreSQL for user profiles and search functionality
 
