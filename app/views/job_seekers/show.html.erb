@@ -1,3 +1,7 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag 'jobseeker-detail', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %>
+
 <p style="color: green"><%= notice %></p>
 
 <div class="logo-header">
@@ -8,13 +12,14 @@
 
   <div class="green-style-column"></div>
   <div class="jobseeker-detail-view">
-    <%= render @job_seeker %>
+    <%= render partial: "job_seekers/job_seeker_detail", locals: { job_seeker: @job_seeker } %>
 
-    <div>
-      <%= link_to "Edit this job seeker", edit_job_seeker_path(@job_seeker) %> |
-      <%= link_to "Back to job seekers", job_seekers_path %>
-
-      <%= button_to "Destroy this job seeker", @job_seeker, method: :delete %>
+    <div class="back-links-container">
+      <div class="navigation-links">
+        <%= link_to "Edit this job seeker", edit_job_seeker_path(@job_seeker), class: "edit-link" %> |
+        <%= link_to "Back to job seekers", job_seekers_path, class: "back-to-jobseeker-link" %>
+      </div>
+      <%= button_to "Delete Profile", @job_seeker, method: :delete, class: "delete-button" %>
     </div>
   </div>
 
