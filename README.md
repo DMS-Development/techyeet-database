@@ -1,7 +1,8 @@
 # Tech Community Job Seeker Platform
 
 ## Description
-An interactive platform for the diverse Tech Community in Denver, serving as a bridge between job seekers and potential employers. It allows job seekers to create detailed profiles and enables employers to search, filter, and contact candidates directly.
+An interactive platform for the diverse Tech Community in Denver, serving as a bridge between job seekers and potential employers. It allows job seekers to create detailed profiles and enables employers to search, filter, and contact candidates directly.<br>
+***Live demo coming soon!***
 
 ## Key Features
 - **Profile Creation** for job seekers with comprehensive information
@@ -12,7 +13,7 @@ An interactive platform for the diverse Tech Community in Denver, serving as a b
 ## Technologies Used
 - **Full-stack Development:** Ruby on Rails
 - **Frontend:** ERB/RHTML, CSS, and Stimulus for JavaScript interactivity
-- **Authentication:** Devise with role-based access control
+- **Authentication:** Devise
 - **Social Media Integration:** OmniAuth
 - **Database:** PostgreSQL for user profiles and search functionality
 
