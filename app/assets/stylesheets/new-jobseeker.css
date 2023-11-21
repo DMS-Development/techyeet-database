@@ -1,3 +1,7 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 .logo-header {
     display: flex;
     width: 100%;
@@ -69,6 +73,7 @@
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    color: #093042;
 }
 
 ::placeholder {
@@ -108,6 +113,7 @@
 .new-job-seeker-main>form textarea:focus {
     border-color: #0C5A97;
     outline: none;
+    width: 100%;
 }
 
 .relocate-label {
@@ -144,4 +150,72 @@ a:hover {
     width: 3vw;
     height: 100%;
     background-color: #93F0AA;
+}
+
+.choices {
+    margin-bottom: 1rem;
+    padding: .15rem;
+}
+
+.choices[data-type*='select-one'],
+.choices__list--dropdown,
+.choices__input,
+.choices__list--single,
+.choices__item,
+.choices__item--choice {
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+}
+
+.choices[data-type*='select-one'] {
+    border: 1px solid #ccc;
+    width: 100%;
+
+    position: relative;
+}
+
+.choices__list, .choices__item {
+    padding: 0;
+}
+
+.choices__list--single {
+    padding: 0;
+}
+
+
+.choices__list--single,
+.choices__item--choice {
+    font-size: 0.7rem;
+    padding: .5rem;
+    color: #093042;
+    background-color: white;
+}
+
+.choices__list--dropdown {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.choices__item--choice:hover,
+.choices__item--choice.is-highlighted {
+    background-color: #0C5A97;
+    color: white;
+}
+
+.choices[data-type*='select-one'] .choices__list--dropdown {
+    position: absolute;
+    width: calc(100% - 2px);
+    display: none;
+}
+
+.choices[data-type*='select-one'].is-open .choices__list--dropdown {
+    display: block;
+}
+
+/* Apply lower z-index to Choices dropdown elements */
+.choices,
+.choices__list.choices__list--single,
+.choices__item.choices__item--selectable {
+    z-index: 1; /* Must be lower than your menu's z-index */
 }

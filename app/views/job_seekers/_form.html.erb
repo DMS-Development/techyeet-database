@@ -11,8 +11,14 @@
     </div>
   <% end %>
 
-  <%= form.label :name %>
-  <%= form.text_field :name, placeholder: "Name", required: true %>
+  <%= form.label :first_name %>
+  <%= form.text_field :name, placeholder: "First Name", required: true %>
+
+  <%= form.label :last_name %>
+  <%= form.text_field :name, placeholder: "Last Name", required: true %>
+
+  <%= form.label :location %>
+  <%= form.collection_select :location_id, Location.all, :id, :name_with_state_country, {}, { class: 'select' } %>
 
   <%= form.label :current_title %>
   <%= form.text_field :current_title, placeholder: "Current job title", required: true %>
@@ -37,7 +43,7 @@
   <%= form.select :education_level, options_for_select(["High School", "GED", "College", "Some College", "Graduate School"]), prompt: "Highest education level", required: true %>
 
   <%= form.label :company_size_preference %>
-  <%= form.select :company_size_preference, options_for_select(["Small", "Medium", "Large"]),prompt: "preferred company size", required: true %>
+  <%= form.select :company_size_preference, options_for_select(["Small", "Medium", "Large"]), prompt: "preferred company size", required: true %>
 
   <%= form.label :salary_range %>
   <%= form.select :salary_range, options_for_select(["$70,000-$85,000", "$85,000-$100,000", "$100,000-$115,000", "$115,000-$130,000", "$130,000-$145,000", "$145,000-$160,000", "$175,000-$190,
@@ -64,6 +70,6 @@
   <%#= resume %>
 
   <div class="submit-container">
-    <%= form.submit%>
+    <%= form.submit %>
   </div>
 <% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_08_191740) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_16_222015) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,7 +28,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_08_191740) do
   end
 
   create_table "job_seekers", force: :cascade do |t|
-    t.string "name"
     t.string "available_to_start"
     t.date "search_start_date"
     t.string "search_status"
@@ -48,6 +47,10 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_08_191740) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.bigint "location_id"
+    t.index ["location_id"], name: "index_job_seekers_on_location_id"
     t.index ["user_id"], name: "index_job_seekers_on_user_id"
   end
 
@@ -62,10 +65,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_08_191740) do
     t.string "city"
     t.string "state"
     t.string "country"
-    t.bigint "job_seeker_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["job_seeker_id"], name: "index_locations_on_job_seeker_id"
   end
 
   create_table "skills", force: :cascade do |t|
@@ -87,6 +88,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_08_191740) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "job_seekers", "locations"
   add_foreign_key "job_seekers", "users"
-  add_foreign_key "locations", "job_seekers"
 end
